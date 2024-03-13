@@ -8,7 +8,7 @@
 
 ## 求生指南系列
 闲来无事在网上逛的时候偶然看见的分享贴，希望有朝一日能成为这些作者一般的大手子
-![img](https://github.com/KamikazeHinata/Accumulation/blob/main/img/4.jpg 想成为他们！)
+![img](https://github.com/KamikazeHinata/Accumulation/blob/main/img/4.jpg "想成为他们！")
 
 ### 系列-1：水曜日鸡桑
 1. [前期准备](https://zhuanlan.zhihu.com/p/306384460)  
