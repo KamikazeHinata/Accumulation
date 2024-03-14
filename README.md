@@ -1,10 +1,28 @@
 
 
 ## 前言
-这篇文章（？）主要是为了放一些平日的积累，把这个放在远端更新会方便一些
+这篇文章（该说是文章嘛？）主要是为了放一些平日的积累，把这个放在远端更新会方便一些
 
-## 速查文档
-[Markdown 基本语法](https://markdown.com.cn/basic-syntax/) 
+## > 速查文档
+- [Markdown 基本语法](https://markdown.com.cn/basic-syntax/) 
+
+## > 参考书籍
+- 图形学
+  - [Real-Time Rendering](https://www.realtimerendering.com/)
+
+## 课程
+- 图形学
+  - [GAMES101](https://sites.cs.ucsb.edu/~lingqi/teaching/games101.html)
+
+## > 参考站点
+- 图形学
+  - [Candycat1992的博客](https://candycat1992.github.io/)
+  - [SIGGRAPH](https://www.siggraph.org/)
+
+## ↓ 知识点记录 ↓
+> 怎么做 - 为什么这么做 - 为什么不这么做
+---
+TODO
 
 ## 求生指南系列
 闲来无事在网上逛的时候偶然看见的分享贴，希望有朝一日能成为这些作者一般的大手子
@@ -20,16 +38,6 @@
 2. [2023年总结](https://zhuanlan.zhihu.com/p/632083926)
 3. [2024年总结](https://zhuanlan.zhihu.com/p/680356638)
 4. [番外篇](https://zhuanlan.zhihu.com/p/557133446)
-
-## ↓ 知识点记录 ↓
-> 怎么做 - 为什么这么做 - 为什么不这么做
----
-
-<!-- ### 帧同步、状态同步
-- 第一点
-- 第二点
-- 第三点 -->
-
 
 ## ↓ 一些可能的知识点，之后查一查答案 ↓
 - UGUI合批规则
