@@ -29,7 +29,7 @@
 
 #### 数组切片（Range）
 - 似乎是后面的 C# 版本才有，目前的 Unity 不支持
-- [官方文档(.NET6 Range Struct)](https://learn.microsoft.com/en-us/dotnet/api/system.range?view=net-6.0)
+- [官方文档](https://learn.microsoft.com/zh-cn/dotnet/csharp/language-reference/operators/member-access-operators#range-operator-)
 - [用法说明：Index型とRange型で快適に配列を扱う(Qiita)](https://qiita.com/Euglenach/items/c433afe78d72fc1a18fc)
 
 ## 求生指南系列
