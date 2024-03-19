@@ -22,7 +22,15 @@
 ## ↓ 知识点记录 ↓
 > 怎么做 - 为什么这么做 - 为什么不这么做
 ---
-TODO
+### C#
+#### LINQ
+- [官方文档](https://learn.microsoft.com/zh-tw/dotnet/csharp/linq/)
+- [（知乎文章）小白入门级](https://zhuanlan.zhihu.com/p/146747701)
+
+#### 数组切片（Range）
+- 似乎是后面的 C# 版本才有，目前的 Unity 不支持
+- [官方文档(.NET6 Range Struct)](https://learn.microsoft.com/en-us/dotnet/api/system.range?view=net-6.0)
+- [用法说明：Index型とRange型で快適に配列を扱う(Qiita)](https://qiita.com/Euglenach/items/c433afe78d72fc1a18fc)
 
 ## 求生指南系列
 闲来无事在网上逛的时候偶然看见的分享贴，希望有朝一日能成为这些作者一般的大手子
