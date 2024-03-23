@@ -21,8 +21,7 @@
   - [GURU's website](https://refactoringguru.cn/design-patterns/catalog)
 
 # 求生指南
-为了在互联网的世界——或者说——这个世界活下去，不得不去看一些他人的经验  
-[好在一些大佬有分享](category/Survive.md)
+[一些大佬的有分享](category/Survive.md)
 
 # 知识点记录
 > 怎么做 - 为什么这么做 - 为什么不这么做
