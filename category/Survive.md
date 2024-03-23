@@ -1,5 +1,5 @@
-# 求生指南系列
-闲来无事在网上逛的时候偶然看见的分享贴，希望有朝一日能成为这些作者一般的大手子  
+# 社招指南
+希望有朝一日能成为这些作者一般的大手子  
 ![img](https://github.com/KamikazeHinata/Accumulation/blob/main/img/4.jpg "想成为他们！")
 
 ## 系列-1：水曜日鸡桑
@@ -13,7 +13,17 @@
 3. [2024年总结](https://zhuanlan.zhihu.com/p/680356638)
 4. [番外篇](https://zhuanlan.zhihu.com/p/557133446)
 
+## 简历准备
+
+### 怎么写
+[> 程序员如何写一份更好的简历](https://zhuanlan.zhihu.com/p/38431524)  
+[> 程序员简历指南 ](https://javaguide.cn/interview-preparation/resume-guide.html#%E4%B8%93%E4%B8%9A%E6%8A%80%E8%83%BD)
+
+### 样例
+[> Awesome Resume 一些简历惯用例句 ](https://github.com/resumejob/awesome-resume?tab=readme-ov-file#%E4%B8%AD%E6%96%87)  
+
 ## 其他
 [Unity常见面试题总结](https://blog.csdn.net/zhangay1998/article/details/131687288)  
 (TODO: 上面这个内容比较多，看完直接总结在本文档中)
+
 
