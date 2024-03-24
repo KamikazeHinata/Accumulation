@@ -1,8 +1,9 @@
 # 知识点记录
 ## C#
 ### 编码规范
-- [编写CSharp时最好遵守的规范，**每次写代码之前过来看一看**](https://learn.microsoft.com/zh-cn/dotnet/csharp/fundamentals/coding-style/coding-conventions)
-- (TODO：找个时间把上面文档里的规范看一下、精简后直接把内容总结在这儿)
+- [编写CSharp时最好遵守的规范](https://learn.microsoft.com/zh-cn/dotnet/csharp/fundamentals/coding-style/coding-conventions)， **每次写代码之前过来看一看**
+- TODO：
+  - 找个时间把上面文档里的规范看一下、精简后直接把内容总结在这儿
 
 ### LINQ
 - [官方文档 (入门)](https://learn.microsoft.com/zh-tw/dotnet/csharp/linq/)
