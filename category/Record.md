@@ -54,7 +54,7 @@
 #### 快速幂
 - [快速幂 - OI Wiki](https://oi-wiki.org/math/binary-exponentiation/)
 #### 矩阵
-- []
+- [Matrix Cookbook](https://www2.imm.dtu.dk/pubdb/pubs/3274-full.html)
 
 ## 杂项
 ### Windows CMD
