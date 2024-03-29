@@ -9,6 +9,7 @@
 
 # 速查文档
 - [Markdown 基本语法](https://markdown.com.cn/basic-syntax/) 
+- [FreeStyleWiki (以前研究室用的wiki框架)](https://freestylewiki.sourceforge.io/cgi-bin/wiki.cgi?page=FrontPage) 以及对应的 [github 主页](https://github.com/FreeStyleWiki)
 
 # 课程
 - 图形学
@@ -22,6 +23,8 @@
   - [GURU's website](https://refactoringguru.cn/design-patterns/catalog)
 
 # 参考书籍
+- 重构
+  - [重构·改善既有代码设计](https://book-refactoring2.ifmicro.com/)
 - 图形学
   - [Real-Time Rendering](https://www.realtimerendering.com/)
 
