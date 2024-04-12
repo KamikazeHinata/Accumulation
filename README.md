@@ -2,6 +2,9 @@
 # 前言
 这篇文章（该说是文章嘛？）主要是为了放一些平日的积累，把这个放在远端更新会方便一些
 
+# TODO
+[543. 二叉树的直径](https://leetcode.cn/problems/diameter-of-binary-tree/description/) 这个看下优化下提交。
+
 # 子文档
 ### [知识点记录](category/Record.md)
 ### [TODO List](category/TODO.md)
