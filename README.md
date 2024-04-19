@@ -7,6 +7,7 @@
 
 # 子文档
 ### [知识点记录](category/Record.md)
+### [知识点记录（链接）](category/RecordLink.md)
 ### [TODO List](category/TODO.md)
 ### [社招指南](category/Survive.md)
 
