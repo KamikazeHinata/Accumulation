@@ -3,7 +3,8 @@
 这篇文章（该说是文章嘛？）主要是为了放一些平日的积累，把这个放在远端更新会方便一些
 
 # TODO
-[543. 二叉树的直径](https://leetcode.cn/problems/diameter-of-binary-tree/description/) 这个看下优化下提交。
+- [543. 二叉树的直径](https://leetcode.cn/problems/diameter-of-binary-tree/description/) 这个看下优化下提交。  
+- 用 [这道题](https://leetcode.cn/problems/balance-a-binary-search-tree/solutions/241897/jiang-er-cha-sou-suo-shu-bian-ping-heng-by-leetcod/) 练习一下 [AVL树](https://zh.wikipedia.org/wiki/AVL%E6%A0%91) 和 [红黑树](https://zh.wikipedia.org/wiki/%E7%BA%A2%E9%BB%91%E6%A0%91) 的生成
 
 # 子文档
 ### [知识点记录](category/Record.md)
