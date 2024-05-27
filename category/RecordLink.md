@@ -32,14 +32,6 @@
 - [.NET 官方文档 ( 用作分布运算符 LIKE [ .. charArr] )](https://learn.microsoft.com/zh-cn/dotnet/csharp/language-reference/operators/collection-expressions#spread-element)
 - [用法说明：Index型とRange型で快適に配列を扱う(Qiita)](https://qiita.com/Euglenach/items/c433afe78d72fc1a18fc)
 
-## Unity
-### 官方文档
-- [Unity Docs](https://docs.unity.com/)
-- [UGUI](https://docs.unity3d.com/Packages/com.unity.ugui@1.0/manual/index.html)
-### AssetBundle 相关
-- [资产依赖](https://docs.unity3d.com/Packages/com.unity.addressables@2.0/manual/AssetDependencies.html)
-- [内存管理](https://docs.unity3d.com/Packages/com.unity.addressables@1.18/manual/MemoryManagement.html)
-
 ## Lua
 - [深入理解Lua虚拟机 - 可可西 - 博客园](https://www.cnblogs.com/kekec/p/11768935.html)
 
