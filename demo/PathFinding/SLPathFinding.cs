@@ -3,16 +3,18 @@ using OfficeOpenXml.FormulaParsing.Excel.Functions.RefAndLookup;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using Unity.QuickSearch;
 using UnityEngine;
+using Debug = UnityEngine.Debug;
 
 public class SLPathFinding : MonoBehaviour
 {
     public int widthCount = 150;
     public int heightCount = 150;
 
-    public int waitFrame = 20;
+    public float blockPercent = 10;
 
     Mesh pMesh;
     public Vector3 m_CubeScale = new Vector3(0.5f, 0.5f, 1);
@@ -32,10 +34,18 @@ public class SLPathFinding : MonoBehaviour
         GenerateWallMap();
         GenerateBlocks();
 
-        WalkPath(new int[] { 0, 0 }, new int[] { widthCount - 1, heightCount - 1 });
+        Stopwatch stopwatch = new Stopwatch();
+        stopwatch.Start();
+
+        WalkPath_AStar(new int[] { 0, 0 }, new int[] { widthCount - 1, heightCount - 1 });
+
+        stopwatch.Stop();
+        Debug.Log($"Execution: {stopwatch.ElapsedMilliseconds}ms");
     }
 
-    void WalkPath(int[] start, int[] end)
+
+    #region A*
+    void WalkPath_AStar(int[] start, int[] end)
     {
         m_end = end;
 
@@ -58,34 +68,34 @@ public class SLPathFinding : MonoBehaviour
         cameFrom[start] = null;
 
         // Find path
-        int cnt = 0, limit = 1000;
+        //int cnt = 0, limit = 1000;
         while (openSet.Count > 0)
         {
-            Debug.Log($"Open Set Count 1: {openSet.Count}");
-            if (++cnt > limit)
-            {
-                Debug.Log("here 1");
-                break;
-            }
+            ////Debug.Log($"Open Set Count 1: {openSet.Count}");
+            //if (++cnt > limit)
+            //{
+            //    //Debug.Log("here 1");
+            //    break;
+            //}
 
             int[] coord = openSet.Pop();
-            Debug.Log($"Open Set Count 2: {openSet.Count}");
+            //Debug.Log($"Open Set Count 2: {openSet.Count}");
 
             // Path Found
             if (coord[0] == end[0] && coord[1] == end[1])
             {
                 Debug.Log("Path found :)");
 
-                int[] from = cameFrom[coord];
-                while (from != null)
+                int[] stepCoord = coord;
+                while (stepCoord != null)
                 {
-                    if (++cnt > limit)
-                    {
-                        Debug.Log("here 2");
-                        break;
-                    }
-                    m_cubeMap[from[0]][from[1]].GetComponent<Renderer>().material.color = Color.red;
-                    from = cameFrom[from];
+                    //if (++cnt > limit)
+                    //{
+                    //    //Debug.Log("here 2");
+                    //    break;
+                    //}
+                    m_cubeMap[stepCoord[0]][stepCoord[1]].GetComponent<Renderer>().material.color = Color.red;
+                    stepCoord = cameFrom[stepCoord];
                 }
 
                 return;
@@ -113,19 +123,36 @@ public class SLPathFinding : MonoBehaviour
         Debug.Log("Done, no path found :(");
     }
 
-    int[][] GetNeighbors(int[] coord)
+    List<int[]> GetNeighbors(int[] coord)
     {
-        int[][] res = new int[4][];
+        List<int[]> res = new List<int[]>();
+
         int x = coord[0], y = coord[1];
 
-        if (x-1 >= 0) 
-            res[0] = new int[] { x - 1, y };
-        if (y+1 < heightCount) 
-            res[1] = new int[] { x, y + 1 };
-        if (x+1 < widthCount) 
-            res[2] = new int[] { x + 1, y };
-        if (y-1 >= 0) 
-            res[3] = new int[] { x, y - 1 };
+        bool isLeftBorder = x == 0;
+        bool isTopBorder = y == heightCount - 1;
+        bool isRightBorder = x == widthCount - 1;
+        bool isBottomBorder = y == 0;
+
+        // Straight
+        if (!isLeftBorder)
+            res.Add(new int[] { x - 1, y });
+        if (!isTopBorder)
+            res.Add(new int[] { x, y + 1 });
+        if (!isRightBorder)
+            res.Add(new int[] { x + 1, y });
+        if (!isBottomBorder)
+            res.Add(new int[] { x, y - 1 });
+
+        // Diagonal
+        if (!isLeftBorder && !isTopBorder)
+            res.Add(new int[] { x - 1, y + 1 });
+        if (!isRightBorder && !isTopBorder)
+            res.Add(new int[] { x + 1, y + 1 });
+        if (!isLeftBorder && !isBottomBorder)
+            res.Add(new int[] { x - 1, y - 1 });
+        if (!isRightBorder && !isBottomBorder)
+            res.Add(new int[] { x + 1, y - 1 });
 
         return res;
     }
@@ -185,10 +212,109 @@ public class SLPathFinding : MonoBehaviour
     static int GetRealDistance(int[] coordA, int[] coordB)
     {
         // Assume A, B are neighbors.
-        return 1;
+        if (coordA[0] == coordB[0])
+        {
+            // Vertical straight move
+            return Math.Abs(coordA[1] - coordB[1]);
+        }
+        else if (coordA[1] == coordB[1])
+        {
+            // Horizontal straight move
+            return Math.Abs(coordA[0] - coordB[0]);
+        }
+        else
+        {
+            // Diagonal move, assume such case consist of 2 straight move
+            return GetManhattonDistance(coordA, coordB);
+        }
     }
 
+    #endregion A*
 
+    #region JPS
+
+    void WalkPath_JPS(int[] start, int[] end)
+    {
+        m_end = end;
+
+        // Init Path recorder
+        Dictionary<int[], int[]> cameFrom = new Dictionary<int[], int[]>();
+
+        // Init G, H
+        for (int i = 0; i < widthCount; ++i)
+        {
+            G[i] = new Dictionary<int, int>();
+            for (int j = 0; j < heightCount; ++j)
+            {
+                G[i][j] = int.MaxValue;
+            }
+        }
+
+        // Start point
+        G[start[0]][start[1]] = 0;
+        openSet.Add(start);
+        cameFrom[start] = null;
+
+        // Find path
+        //int cnt = 0, limit = 1000;
+        while (openSet.Count > 0)
+        {
+            int[] coord = openSet.Pop();
+
+            // Path Found
+            if (coord[0] == end[0] && coord[1] == end[1])
+            {
+                Debug.Log("Path found :)");
+
+                int[] stepCoord = coord;
+                while (stepCoord != null)
+                {
+                    //if (++cnt > limit)
+                    //{
+                    //    //Debug.Log("here 2");
+                    //    break;
+                    //}
+                    m_cubeMap[stepCoord[0]][stepCoord[1]].GetComponent<Renderer>().material.color = Color.red;
+                    stepCoord = cameFrom[stepCoord];
+                }
+
+                return;
+            }
+
+            // Access neighbors
+            foreach (var neighbor in GetNeighbors(coord))
+            {
+                if (neighbor != null && CanWalk(neighbor) && !IsAdded(neighbor))
+                {
+                    // Update G
+                    var tmp = G[coord[0]][coord[1]] + GetRealDistance(coord, neighbor);
+                    if (tmp < G[neighbor[0]][neighbor[1]])
+                    {
+                        G[neighbor[0]][neighbor[1]] = tmp;
+                        cameFrom[neighbor] = coord;
+                    }
+
+                    // Add to Open Set
+                    AddOpenSet(neighbor);
+                    SetAdded(neighbor[0], neighbor[1]);
+                }
+            }
+        }
+        Debug.Log("Done, no path found :(");
+    }
+
+    List<int[]> GetPrunedNeighbors(int[] coord)
+    {
+        List<int[]> res = new List<int[]>();
+        foreach (var neighbor in GetNeighbors(coord))
+        {
+            // Code here...
+        }
+
+        return res;
+    }
+
+    #endregion JPS
 
     #region 堆
 
@@ -312,8 +438,10 @@ public class SLPathFinding : MonoBehaviour
             {
                 if (i == 0 && j == 0)
                     m_wallMap[i][j] = false; // start point
+                else if (i == widthCount-1 && j == heightCount-1)
+                    m_wallMap[i][j] = false; // end point
                 else
-                    m_wallMap[i][j] = UnityEngine.Random.Range(0, 10) == 1; // 10% is wall
+                    m_wallMap[i][j] = UnityEngine.Random.Range(0.0f, 100.0f) < blockPercent;
             }
         }
     }
