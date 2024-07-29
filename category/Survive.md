@@ -17,7 +17,8 @@
 
 ### 怎么写
 [> 程序员如何写一份更好的简历](https://zhuanlan.zhihu.com/p/38431524)  
-[> 程序员简历指南 ](https://javaguide.cn/interview-preparation/resume-guide.html#%E4%B8%93%E4%B8%9A%E6%8A%80%E8%83%BD)
+[> 程序员简历指南 ](https://javaguide.cn/interview-preparation/resume-guide.html#%E4%B8%93%E4%B8%9A%E6%8A%80%E8%83%BD)  
+[> 来自面试官的分享（鱼皮） ](https://www.nowcoder.com/discuss/526444192977997824)
 
 ### 样例
 [> Awesome Resume 一些简历惯用例句 ](https://github.com/resumejob/awesome-resume?tab=readme-ov-file#%E4%B8%AD%E6%96%87)  
