@@ -33,13 +33,15 @@
 - [用法说明：Index型とRange型で快適に配列を扱う(Qiita)](https://qiita.com/Euglenach/items/c433afe78d72fc1a18fc)
 
 ## Lua
-- [深入理解Lua虚拟机 - 可可西 - 博客园](https://www.cnblogs.com/kekec/p/11768935.html)
+- [深入理解Lua虚拟机 - 可可西 - 博客园](https://www.cnblogs.com/kekec/p/11768935.html)  
+- [Userdata 相关(Light-UserData/Full-UserData)](https://blog.csdn.net/qq826364410/article/details/88672091)
 
 ## 算法
 ### 寻路
 #### JPS(Jump-Point Search, 基于 A-star 的优化算法) 
 - [（原论文）Online Graph Pruning for Pathfinding on Grid Maps](https://users.cecs.anu.edu.au/~dharabor/data/papers/harabor-grastien-aaai11.pdf)
 - [KillerAery的JPS解说](https://www.cnblogs.com/KillerAery/p/12242445.html)
+- [WikiPedia](https://en.wikipedia.org/wiki/Jump_point_search)
 ### 密码学
 #### AES
 - [AES加密的详细过程是怎么样的？ - 知乎](https://www.zhihu.com/question/27307070)
