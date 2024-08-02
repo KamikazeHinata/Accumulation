@@ -13,11 +13,54 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "知识点/编程语言/C-Sharp/CS 特性标签.md",
                 "mode": "source",
                 "source": false
               }
-            }
+            },
+            "group": "be625c0a1c095203"
+          }
+        ]
+      },
+      {
+        "id": "554f777a0d52ffe0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "98ff4a336a3756ab",
+            "type": "leaf",
+            "state": {
+              "type": "localgraph",
+              "state": {
+                "file": "知识点/编程语言/C-Sharp/CS 特性标签.md",
+                "options": {
+                  "collapse-filter": true,
+                  "search": "",
+                  "localJumps": 1,
+                  "localBacklinks": true,
+                  "localForelinks": true,
+                  "localInterlinks": false,
+                  "showTags": false,
+                  "showAttachments": false,
+                  "hideUnresolved": false,
+                  "collapse-color-groups": true,
+                  "colorGroups": [],
+                  "collapse-display": true,
+                  "showArrow": false,
+                  "textFadeMultiplier": 0,
+                  "nodeSizeMultiplier": 1,
+                  "lineSizeMultiplier": 1,
+                  "collapse-forces": true,
+                  "centerStrength": 0.518713248970312,
+                  "repelStrength": 10,
+                  "linkStrength": 1,
+                  "linkDistance": 250,
+                  "scale": 1,
+                  "close": false
+                }
+              }
+            },
+            "group": "be625c0a1c095203"
           }
         ]
       }
@@ -85,7 +128,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "知识点/编程语言/C-Sharp/CS 特性标签.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +145,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "知识点/编程语言/C-Sharp/CS 特性标签.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +168,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "知识点/编程语言/C-Sharp/CS 特性标签.md"
               }
             }
           }
@@ -148,11 +191,15 @@
   },
   "active": "aee07203401b3d46",
   "lastOpenFiles": [
-    "社招/社招.md",
-    "README.md",
+    "知识点/编程语言/C-Sharp/C-Sharp.md",
+    "知识点/编程语言/C-Sharp/CS 特性标签.md",
+    "知识点/编程语言/C-Sharp",
     "知识点/知识点索引.md",
+    "知识点/Unity/Unity.md",
+    "README.md",
+    "TODO-List/TODO-List.md",
+    "社招/社招.md",
     "知识点/游戏设计/算法/算法.md",
-    "知识点/编程语言/C-Sharp.md",
     "知识点/待整理外部链接.md",
     "知识点/Tools/Windows CMD.md",
     "知识点/游戏设计/算法/寻路算法.md",
@@ -168,10 +215,8 @@
     "知识点/游戏设计/算法",
     "知识点/Untitled.md",
     "知识点/游戏设计/算法",
-    "知识点/Unity/Unity.md",
     "知识点/游戏设计/3C设计.md",
     "知识点/游戏设计",
-    "TODO-List/TODO-List.md",
     "知识点/软件工程/软件工程.md",
     "知识点/编程语言",
     "知识点/测试一下自己！.md",
@@ -180,10 +225,7 @@
     "知识点/Tools/Markdown.md",
     "Untitled.canvas",
     "知识点/设计模式",
-    "2024-07-31.md",
     "知识点/图形学",
-    "知识点/Tools",
-    "课程",
-    "知识点/零碎知识点/零碎知识点.md"
+    "知识点/Tools"
   ]
 }
