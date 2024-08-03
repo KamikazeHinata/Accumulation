@@ -3,3 +3,13 @@
 - [跳表 leetcode](https://leetcode.cn/problems/design-skiplist/description/) ( 关于跳表的相关说明 [OI Wiki](https://oi-wiki.org/ds/skiplist/) / [WikipediaEN](https://en.wikipedia.org/wiki/Skip_list) )
 
 - [垃圾回收的基本知识（MS .NET）](https://learn.microsoft.com/zh-cn/dotnet/standard/garbage-collection/fundamentals)
+
+- [滑动谜题（leetcode）](https://leetcode.cn/problems/sliding-puzzle/description/)
+
+
+
+
+
+
+
+
