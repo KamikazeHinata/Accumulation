@@ -9,6 +9,8 @@
 ---
 - [托管堆内存、非托管堆内存和栈内存](https://www.51cto.com/article/771791.html)
 
+- [垃圾回收的基本知识](https://learn.microsoft.com/zh-cn/dotnet/standard/garbage-collection/fundamentals)
+
 
 ## LINQ
 ---
