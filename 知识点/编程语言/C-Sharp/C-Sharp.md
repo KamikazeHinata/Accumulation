@@ -70,12 +70,12 @@
 ---
 - ## FileStream / MemoryStream
 	- FileStream 读取文件后，将数据复制给 MemoryStream 后 Close 掉，看起来会比较安全
-(```)
+```C#
 	FileStream fs = File.Open(path, FileMode.Open, FileAccess.ReadWrite);
 	MemoryStream ms = new MemoryStream();
 	fs.CopyTo(ms);
 	fs.Close();
-(```)
+```
 
 
 
