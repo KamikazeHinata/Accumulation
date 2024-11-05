@@ -66,7 +66,16 @@
 - [用法说明：Index型とRange型で快適に配列を扱う(Qiita)](https://qiita.com/Euglenach/items/c433afe78d72fc1a18fc)
 
 
-
+# 实践
+---
+- ## FileStream / MemoryStream
+	- FileStream 读取文件后，将数据复制给 MemoryStream 后 Close 掉，看起来会比较安全
+(```)
+	FileStream fs = File.Open(path, FileMode.Open, FileAccess.ReadWrite);
+	MemoryStream ms = new MemoryStream();
+	fs.CopyTo(ms);
+	fs.Close();
+(```)
 
 
 
