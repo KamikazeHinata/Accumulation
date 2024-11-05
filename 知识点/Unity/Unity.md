@@ -21,8 +21,18 @@
 - [内存管理](https://docs.unity3d.com/Packages/com.unity.addressables@1.18/manual/MemoryManagement.html)
 
 
+# Unity Localization 学习
+---
+## 基本概念：
 
+- **Locale**: 一个 Locale 对应一个语种
+- **String Table**: 用于管理存放语种字符串内容
+- **Asset Table**: 用于管理存放语种资产（音频、图片等）资源
 
+## 资源管理
+
+- 基于 Addressable Asset System 进行资源管理
+	- 建立 Group Resolver 进行分组规则管理，如果需要默认规则外的更复杂规则，需自行新建 Group Resolver 类
 
 
 
